@@ -1,31 +1,3 @@
-/*================== send email ================= */
-
-function sendMail() {
-    var params = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value,
-        number: document.getElementById("number").value,
-        subject: document.getElementById("subject").value,
-    };
-
-   const serviceID = "service_upgiyw3";
-   const templateID = "template_5gq5px6";
-
-   emailjs.send(serviceID, templateID, params).then((res) => {
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-    document.getElementById("number").value = "";
-    document.getElementById("subject").value = "";
-    console.log(res);
-    alert("Your message was sent successfully");
-   })
-.catch((err) => console.log(err));
-}
- 
-
-
 /*================== toggle icon navbar ================= */
 
 let menuIcon = document.querySelector('#menu-icon');
